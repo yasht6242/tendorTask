@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import "./App.css";
 import Sidebar from './components/Sidebar/Sidebar';
@@ -9,11 +9,11 @@ import Login from './components/Login/Login';
 import Home from './components/Sidebar/pages/menu/Home';
 import Market from './components/Sidebar/pages/market/Market';
 import Contact from './components/Sidebar/pages/contact/Contact';
-import Dashboard from './components/Dashboard/Dashboard';
+import Dashboard from './components/Dashboard/Dashboard'
+
 
 const App = () => {
   const [user, setUser] = useState(null);
-  const [searchTerm, setSearchTerm] = useState("");
 
   const handleLogin = (credentials) => {
     const authenticatedUser = usersData.find(
@@ -32,9 +32,12 @@ const App = () => {
     localStorage.removeItem("user");
   };
 
-  const handleSearch = (term) => {
-    setSearchTerm(term); // Update search term in App.js
-  };
+  useEffect(() => {
+    const savedUser = localStorage.getItem("user");
+    if (savedUser) {
+      setUser(JSON.parse(savedUser));
+    }
+  }, []);
 
   return (
     <Router>
@@ -49,25 +52,16 @@ const App = () => {
             user ? (
               <div className="app-container">
                 <Sidebar />
+                
                 <div className="main-layout">
-                  {/* Removed Navbar from here */}
+                <Navbar user={user} onLogout={handleLogout} />
                   <div className="content">
                     <Routes>
                       <Route path="/" element={<Navigate to="/home/menu" />} />
                       <Route path="menu" element={<Home />} />
                       <Route path="market" element={<Market />} />
                       <Route path="contact" element={<Contact />} />
-                      <Route
-                        path="dashboard"
-                        element={
-                          <Dashboard
-                            user={user}
-                            searchTerm={searchTerm}
-                            onLogout={handleLogout}
-                            onSearch={handleSearch}
-                          />
-                        }
-                      />
+                      <Route path="dashboard" element={<Dashboard />} user={user} />
                       <Route path="search" element={<Search />} />
                       <Route path="*" element={<Navigate to="/home/menu" />} />
                     </Routes>

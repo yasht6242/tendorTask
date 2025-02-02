@@ -1,0 +1,135 @@
+[
+  {
+    "id": 1,
+    "username": "user1",
+    "password": "password1",
+    "tenders": {
+      "toDo": [
+        {
+          "id": 101,
+          "status": "Not Started",
+          "title": " Construction Tender A",
+          "description": "Description for Tender A",
+          "assignee": "John Doe",
+          "assigneeImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOuxrvcNMfGLh73uKP1QqYpKoCB0JLXiBMvA&s",
+          "dateAssigned": "2025-01-10",
+          "difficulty": "medium",
+          "comments": [
+            "Comment 1 on Tender A",
+            "Comment 2 on Tender A"
+          ],
+          "attachments": [
+            {
+              "url": "https://example.com/attachment1",
+              "name": "Tender A Attachment 1"
+            }
+          ]
+        },
+        {
+          "id": 102,
+          "status": "Not Started",
+          "title": "Construction Tender B",
+          "description": "Description for Tender B",
+          "assignee": "Jane Smith",
+          "assigneeImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOuxrvcNMfGLh73uKP1QqYpKoCB0JLXiBMvA&s",
+          "dateAssigned": "2025-01-12",
+          "difficulty": "low",
+          "comments": ["Comment 1 on Tender B"],
+          "attachments": []
+        },
+        {
+          "id": 103,
+          "status": "In Progress",
+          "title": "Construction Tender C",
+          "description": "Description for Tender C",
+          "assignee": "Alice Johnson",
+          "assigneeImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOuxrvcNMfGLh73uKP1QqYpKoCB0JLXiBMvA&s",
+          "dateAssigned": "2025-01-15",
+          "difficulty": "high",
+          "comments": ["Comment 1 on Tender C"],
+          "attachments": [
+            {
+              "url": "https://example.com/attachment2",
+              "name": "Tender C Attachment 1"
+            }
+          ]
+        }
+      ],
+      
+      "inProgress": [
+        {
+          "id": 103,
+          "status": "In Progress",
+          "title": "Construction Tender C",
+          "description": "Description for Tender C",
+          "assignee": "Alice Johnson",
+          "assigneeImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOuxrvcNMfGLh73uKP1QqYpKoCB0JLXiBMvA&s",
+          "dateAssigned": "2025-01-15",
+          "difficulty": "high",
+          "comments": ["Comment 1 on Tender C"],
+          "attachments": [
+            {
+              "url": "https://example.com/attachment2",
+              "name": "Tender C Attachment 1"
+            }
+          ]
+        }
+      ],
+      "notStarted": [
+        {
+          "id": 104,
+          "status": "Not Started",
+          "title": "Construction Tender D",
+          "description": "Description for Tender D",
+          "assignee": "Robert Brown",
+          "assigneeImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOuxrvcNMfGLh73uKP1QqYpKoCB0JLXiBMvA&s",
+          "dateAssigned": "2025-01-18",
+          "difficulty": "medium",
+          "comments": [],
+          "attachments": []
+        }
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "username": "user2",
+    "password": "password2",
+    "tenders": {
+      "toDo": [
+        {
+          "id": 201,
+          "status": "Not Started",
+          "title": "Construction Tender X",
+          "description": "Description for Tender X",
+          "assignee": "Michael Green",
+          "assigneeImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOuxrvcNMfGLh73uKP1QqYpKoCB0JLXiBMvA&s",
+          "dateAssigned": "2025-01-20",
+          "difficulty": "low",
+          "comments": ["Comment 1 on Tender X"],
+          "attachments": []
+        }
+      ],
+      "inProgress": [
+        {
+          "id": 202,
+          "status": "In Progress",
+          "title": "Construction Tender Y",
+          "description": "Description for Tender Y",
+          "assignee": "Sarah White",
+          "assigneeImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOuxrvcNMfGLh73uKP1QqYpKoCB0JLXiBMvA&s",
+          "dateAssigned": "2025-01-22",
+          "difficulty": "high",
+          "comments": ["Comment 1 on Tender Y"],
+          "attachments": [
+            {
+              "url": "https://example.com/attachment3",
+              "name": "Tender Y Attachment 1"
+            }
+          ]
+        }
+      ],
+      "notStarted": []
+    }
+  }
+]
